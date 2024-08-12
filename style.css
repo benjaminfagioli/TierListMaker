@@ -92,10 +92,13 @@ header {
     align-items: center;
     background-color: #1e1e1e;
     transition: all 0.2s;
-
     &:hover {
       scale: 1.1;
     }
+  }
+  & div {
+    display: flex;
+    gap: 0.5em;
   }
 }
 #selector-items {
@@ -106,6 +109,10 @@ header {
   padding: 0.4em;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  &.drag-files {
+    background-color: lightblue;
+    border-style: dashed;
+  }
 }
 .item {
   width: 100%;
@@ -136,6 +143,7 @@ header {
     left: -340%;
     transition: all 0.2s;
     opacity: 0;
+    display: none;
   }
   &.delete-image {
     background-color: red;
